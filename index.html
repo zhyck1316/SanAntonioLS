@@ -46,6 +46,10 @@
         }
         .bordergradient{
             height: 4px;
+            background: linear-gradient(90deg, rgb(255, 255, 255) 10%, rgb(0, 32, 91) 50%, rgb(255, 255, 255) 90%);
+        }
+        .bordergradient1{
+            height: 4px;
             background: linear-gradient(90deg, rgb(191, 13, 62) 10%, rgb(0, 32, 91) 50%, rgba(191, 13, 62) 90%);
         }
         .sharpcontainer {
@@ -558,7 +562,7 @@
                         <h1 class="break-words text-5xl font-bold">Legal Support Done Right!</h1>
                     </span>
                 </div>
-                <div class="bordergradient my-8"></div>
+                <div class="bordergradient1 my-8"></div>
                 <div class="flex justify-center text-white divide-x divide-dotted divide-DBlue pt-8">
                     <div class="flex flex-col items-center justify-start p-4 w-1/6">
                         <span>
@@ -613,11 +617,23 @@
         </section>
         <section id="pricing" class="my-24">
             <div class="mx-8 md:container md:mx-auto py-16 rounded-lg">
-                <div class="flex flex-col items-center text-DBlue mb-8">
+                <div class="flex flex-col items-center text-DBlue mb-2">
                     <p class="font-bold text-sm pb-2 text-DBred">Process Serving Pricing</p>
                     <span class="">
                         <h1 class="break-words text-5xl font-bold tracking-tighter">QUICK LOOK</h1>
                     </span>
+                </div>
+                <div class="flex flex-col items-center text-DBlue mb-8">
+                    <p class="font-bold text-base pb-4 text-gray-500">To know more about our Service charges and Pricing. Click the button below!</p>
+                    <a href="./pricing.html">
+                        <p class="py-3 px-10 bg-DBlue text-white font-semibold rounded-full flex">Check Pricing Page 
+                            <span class="pl-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                </svg>
+                            </span> 
+                        </p>
+                    </a>
                 </div>
                 <div class="flex space-x-4 mb-8">
                     <div class="flex justify-center space-x-4 items-center w-1/4 border-2 border-gray-300 shadow-xl shadow-gray-400 rounded-lg p-4">
@@ -657,18 +673,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col items-center text-DBlue mb-8">
-                    <p class="font-bold text-base pb-2 text-gray-500">To know more about our Service charges and Pricing. Click the button below!</p>
-                    <a href="./pricing.html">
-                        <p class="py-3 px-10 bg-DBlue text-white font-semibold rounded-full flex">Check Pricing Page 
-                            <span class="pl-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                                </svg>
-                            </span> 
-                        </p>
-                    </a>
-                </div>
+                
             </div>
         </section>
         <section id="feedback" class="bg-white bg-opacity-70 z-20">
