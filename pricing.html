@@ -664,7 +664,7 @@
     </script>
     <script>
         // Initialize the map centered on Alabama
-        const map2 = L.map('map2').setView([29.5, -98], 5);
+        const map2 = L.map('map2').setView([31, -99], 5);
 
         // Add OpenStreetMap tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -749,14 +749,34 @@
     </script>
     <script>
         // Initialize the map centered on Alabama
-        const map1 = L.map('map1').setView([30.5, -97], 5.4);
-
+        const map1 = L.map('map1', {
+            center: [29.8, -98],
+            zoom: 6.9,
+            zoomControl: false
+        });
         // Add OpenStreetMap tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            attribution: '© OpenStreetMap contributors'
+            attribution: '© OpenStreetMap contributor'
         }).addTo(map1);
         
+        L.Control.CustomZoom = L.Control.Zoom.extend({
+            onAdd: function (map1) {
+                const container = L.Control.Zoom.prototype.onAdd.call(this, map1);
+
+                // Override the default zoomIn function
+                const zoomInButton = container.querySelector('.leaflet-control-zoom-in');
+                zoomInButton.onclick = () => {
+                    map1.setView([29.8, -98], 6.9); // Set the desired zoom level when "+" is clicked
+                };
+
+                return container;
+            }
+        });
+
+        // Add the custom zoom control to the map
+        map1.addControl(new L.Control.CustomZoom());
+
         // Create custom panes
         map1.createPane('coveredPane');
         map1.getPane('coveredPane').classList.add('covered-pane');
