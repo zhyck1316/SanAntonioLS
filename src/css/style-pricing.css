@@ -1,0 +1,47 @@
+/* #homebg-container{
+            background-image: url('./src/img/bg/texas-bg1.png');
+            
+        }
+        .bg-overlay{
+            background: linear-gradient(0deg, rgba(177, 177, 177, 0.6) 0%, rgba(177, 177, 177, 0.6) 100%);
+        } */
+
+footer{
+    background-image: url('./src/img/gallery/pexels-pixabay-273204.jpg');
+    
+}
+.footer-overlay{
+    background: linear-gradient(0deg, rgba(0, 32, 91, 0.9) 0%, rgba(0, 32, 91, 0.9) 100%);
+} 
+
+.about-bgoverlay{
+    background: linear-gradient(0deg, rgba(0, 32, 91, 0.5) 0%, rgba(0, 32, 91, 0.5) 100%);
+}
+.bordergradient{
+    height: 4px;
+    background: linear-gradient(90deg, rgb(0, 32, 91) 20%, rgba(191, 13, 62) 70%);
+}
+#map {
+    height: 600px;
+}
+#map1 {
+    height: 400px;
+}
+#map2 {
+    height: 400px;
+}
+/* .covered-pane {
+    z-index: 660;
+}
+.county-pane {
+    z-index: 650;
+}
+.covered-pane .leaflet-overlay-pane path {
+    stroke: rgb(9, 172, 0);
+    stroke-width: 2px;
+}
+.county-pane .leaflet-overlay-pane path {
+    stroke: blue;
+    stroke-width: 1px;
+    fill: rgba(122, 200, 255, 0.1);
+} */
