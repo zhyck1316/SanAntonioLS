@@ -750,10 +750,8 @@
     <script>
         // Initialize the map centered on Alabama
         const map1 = L.map('map1', {
-            center: [29.8, -98],
-            zoom: 6.9,
             zoomControl: false
-        });
+        }).setView([29.8, -98], 6.9);
         // Add OpenStreetMap tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,

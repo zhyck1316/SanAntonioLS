@@ -7,6 +7,9 @@ module.exports = {
         'DBlue': '#00205b',
         'DBred': '#BF0D3E',
       },
+      fontSize:{
+        '2xs': '0.5rem'
+      }
     },
   },
   plugins: [
