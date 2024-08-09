@@ -125,8 +125,7 @@
                             <div class="signature-container">
                                 <canvas id="signature-pad" class="signature-pad bg-white rounded-md border border-gray-400" width="400" height="200" ></canvas>
                                 <div class="signature-buttons flex space-x-4 mt-2">
-                                    <button id="save" class="btn-save border-gray-400 bg-green-200 px-8 py-2 rounded-md">Save</button>
-                                    <button id="clear" class="btn-clear border border-gray-400 px-8 py-2 rounded-md">Clear</button>
+                                    <button id="clear" class="btn-clear border border-gray-400 px-8 py-1 text-xs rounded-md">Clear</button>
                                 </div>
                             </div>
                         </div>
