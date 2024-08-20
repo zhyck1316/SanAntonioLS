@@ -17,8 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
 
     <style>
         *{
@@ -55,7 +53,6 @@
         .sharpcontainer {
             position: relative;
             width: 100%;
-            height: 50px;
             overflow: hidden;
         }
 
@@ -65,7 +62,6 @@
             height: 100%;
             display: flex;
             align-items: center;
-            font-weight: bold;
         }
         .angled-div2 {
             position: absolute;
@@ -78,7 +74,6 @@
         .angled-div3 {
             position: absolute;
             width: 55%;
-            height: 10%;
             display: flex;
             align-items: center;
             font-weight: bold;
@@ -87,7 +82,6 @@
         .angled-div4 {
             position: absolute;
             width: 60%;
-            height: 4%;
             display: flex;
             align-items: center;
             font-weight: bold;
@@ -121,7 +115,7 @@
             justify-content: end;
         }
         .div5 {
-            clip-path: polygon(0 0, 75% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
             right: 0;
             bottom: 0;
             justify-content: end;
@@ -138,6 +132,25 @@
             bottom: 0;
             justify-content: end;
         }
+        .bg-slideshow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            animation: slide 20s infinite;
+            z-index: -1; /* Behind the content */
+            }
+
+            /* Keyframes for the background slideshow */
+            @keyframes slide {
+            0% { background-image: url('./src/img/gallery/alamo.jpg'); }
+            20% { background-image: url('./src/img/gallery/slide-1.jpeg'); }
+            40% { background-image: url('./src/img/gallery/slide-2.jpeg'); }
+            60% { background-image: url('./src/img/gallery/slide-3.jpeg'); }
+            80% { background-image: url('./src/img/gallery/pexels-pixabay-273204.jpg'); }
+            100% { background-image: url('./src/img/gallery/alamo.jpg'); }
+            }
     </style>
 </head>
 <body>
@@ -145,13 +158,13 @@
     <main>
         <div class="relative">
             <div class="absolute left-0 top-1/2 transform -translate-y-1/2 rotate-45 opacity-10 flex items-center justify-center text-white font-bold">
-                <img src="./src/img/gallery/texasflag-1.png" alt="" class="h-auto w-[45rem]">
+                <!-- <img src="./src/img/gallery/texasflag-1.png" alt="" class="h-auto w-[45rem]"> -->
             </div>
-            <div class="absolute left-0 bottom-0 h-36 angled-div3 div5 bg-DBred z-40">
+            <div class="absolute left-0 bottom-0 h-[7%] md:h-[10%] angled-div3 div5 bg-DBred z-50">
             
             </div>
-            <div class="absolute flex items-center right-0 bottom-0 h-10 w-[100rem] bg-DBlue z-20">
-                <div class="flex space-x-8 justify-end text-white items-center container max-w-[90rem] mx-auto">
+            <div class="absolute flex items-center justify-end right-0 bottom-0 h-10 w-[100rem] bg-DBlue z-40">
+                <div class="flex space-x-8 justify-end text-white items-center container max-w-[90rem] mx-0 md:mx-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
                         <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
                     </svg>
@@ -211,11 +224,10 @@
             <section class="bg-center bg-cover bg-white" id="home">
                 <div class="w-full h-full bg-overlay overflow-hidden">
                     <nav class="z-30">
-                        <div class="">
-                            <div class="grid grid-cols-2 lg:grid-cols-2 sharpcontainer">
-                                <div class="ml-36 flex px-4 items-center space-x-4 angled-div div1">
-                                    <div class="break-words space-y-2 max-w-80 text-white mb-8 text-sm">
-                                        <h4 class="font-bold text-lg text-white mb-8">Social Media</h4>
+                        <div class="hidden md:block">
+                            <div class="grid grid-cols-2 lg:grid-cols-2 h-[30px] md:h-[50px] sharpcontainer">
+                                <div class="ml-36 hidden md:flex px-4 items-center space-x-4 angled-div div1">
+                                    <div class="flex items-center max-w-80 text-sm">
                                         <div class="flex space-x-5 bg-white p-2 rounded-full">
                                             <span class="size-4">
                                                 <a href="https://www.facebook.com/share/n5qcfYvntHE41fGo/?mibextid=qi2Omg">                                                
@@ -242,7 +254,7 @@
                                     </div>
                                 </div>
                                 <div class="flex bg-DBlue text-neutral-100 angled-div div2">
-                                    <div class="mr-36 flex space-x-4 text-sm font-light">
+                                    <div class="mr-36 flex space-x-4 text-2xs md:text-sm font-light">
                                         <div class="flex items-center">
                                             <span class="pr-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
@@ -257,9 +269,9 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
                                                 </svg>
                                             </span>
-                                            <p>Call us: +844 1255 668 333</p>
+                                            <p >Call us: +726 800 3612</p>
                                         </div>
-                                        <a href="./pricing.html" target="_blank">
+                                        <a href="./pricing.html" target="_blank" class="hidden md:block">
                                             <div class="flex items-center bg-DBred text-white text-xs font-bold px-6 py-[4px]">
                                                 REQUEST A QOUTE TODAY <span class="pl-2">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -272,77 +284,136 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="max-w-[100rem] mx-auto py-2">
-                            <div class="relative flex h-16 items-center justify-between">
-                            <div class="absolute inset-y-0 left-0 flex items-center lg:hidden">
-                                <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-neutral-600 hover:bg-neutral-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" id="menu-button">
-                                <span class="sr-only">Open main menu</span>
-                                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                </svg>
-                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                                </button>
+                        <div class="flex justify-end md:hidden bg-DBlue">
+                            <div class="p-2 flex space-x-4 text-xs font-medium text-white">
+                                <div class="flex items-center">
+                                    <span class="pr-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                        </svg>
+                                    </span>
+                                    <p>diamondbackps@outlook.com</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="pr-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+                                        </svg>
+                                    </span>
+                                    <p >Call us: +726 800 3612</p>
+                                </div>
+                                <a href="./pricing.html" target="_blank" class="hidden md:block">
+                                    <div class="flex items-center bg-DBred text-white text-xs font-bold px-6 py-[4px]">
+                                        REQUEST A QOUTE TODAY <span class="pl-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                            </svg>
+                                            </span>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="absolute inset-y-0 right-0 items-center hidden lg:flex xl:hidden">
-                                <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-neutral-600 hover:bg-neutral-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu2" aria-expanded="false" id="menu-button2">
+                        </div>
+                        <div class="max-w-[100rem] mx-auto py-2">
+                            <div class="relative flex h-16 items-center justify-center">
+                                <div class="absolute inset-y-0 left-0 flex items-center lg:hidden">
+                                    <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-neutral-600 hover:bg-neutral-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" id="menu-button">
                                     <span class="sr-only">Open main menu</span>
                                     <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                                     </svg>
                                     <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                                     </svg>
-                                </button>
-                            </div>
-                            <div class="flex flex-1 items-center justify-center sm:items-center sm:justify-between">
-                                <div class="hidden lg:flex items-center">
-                                    <div class="flex flex-shrink-0 items-center">
-                                        <img class="h-10 lg:h-14 w-auto pr-2" src="./src/img/logo/sanantonio-logo4.jpeg" alt="Your Company">
-                                        <div class="">
-                                            <p class="font-bold text-DBlue ">DiamondBack Process Server</p>
-                                            <p class="text-xs font-medium text-DBred">San Antonio Texas</p>
+                                    </button>
+                                </div>
+                                <div class="absolute inset-y-0 right-0 items-center hidden lg:flex xl:hidden">
+                                    <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-neutral-600 hover:bg-neutral-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu2" aria-expanded="false" id="menu-button2">
+                                        <span class="sr-only">Open main menu</span>
+                                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                        </svg>
+                                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="hidden lg:flex flex-1 items-center justify-center sm:items-center sm:justify-between">
+                                    <div class="hidden lg:block items-center">
+                                        <div class="flex flex-shrink-0 items-center">
+                                            <img class="h-10 lg:h-14 w-auto pr-2" src="./src/img/logo/sanantonio-logo4.jpeg" alt="Your Company">
+                                            <div class="">
+                                                <p class="font-bold text-DBlue ">DiamondBack Process Server</p>
+                                                <p class="text-xs font-medium text-DBred">San Antonio Texas</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="hidden xl:block items-center relative z-30 ">
-                                    <div class="flex items-center">
-                                        <div class="sm:ml-6 hidden sm:block">
-                                            <div class="flex items-center space-x-6 text-neutral-600">
-                                                <a href="./index.html" class="block rounded-md px-3 py-2 text-sm font-bold" aria-current="page">HOME</a>
-                                                <a href="#services" class=" hover:text-white block rounded-md px-3 py-2 text-sm font-bold">SERVICES</a>
-                                                <a href="#about" class="hover:text-white block rounded-md px-3 py-2 text-sm font-bold">ABOUT</a>
-                                                <a href="#contact" class=" hover:text-white block rounded-md px-3 py-2 text-sm font-bold">CONTACT</a>
-                                                <a href="./blog.html" class=" hover:text-white block rounded-md px-3 py-2 text-sm font-bold">BLOGS</a>
-                                                <div class="flex items-center space-x-4 pl-6 border-l-2 text-DBlue border-DBlue">
-                                                    <div class="flex ">
-                                                        <a href="./index.php" target="_blank">
-                                                            <span>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                                                </svg>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <div class="flex ">
-                                                        <a href="https://rocketserve.app/">
-                                                            <span>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                                                                </svg>
-                                                            </span>
-                                                        </a>
+                                    <div class="hidden lg:block items-center relative z-30 ">
+                                        <div class="flex items-center">
+                                            <div class="sm:ml-6 hidden sm:block">
+                                                <div class="flex items-center space-x-6 text-neutral-600">
+                                                    <a href="./index.html" class="block rounded-md px-3 py-2 text-sm font-bold" aria-current="page">HOME</a>
+                                                    <a href="#services" class=" hover:text-white block rounded-md px-3 py-2 text-sm font-bold">SERVICES</a>
+                                                    <a href="#about" class="hover:text-white block rounded-md px-3 py-2 text-sm font-bold">ABOUT</a>
+                                                    <a href="#contact" class=" hover:text-white block rounded-md px-3 py-2 text-sm font-bold">CONTACT</a>
+                                                    <a href="./blog.html" class=" hover:text-white block rounded-md px-3 py-2 text-sm font-bold">BLOGS</a>
+                                                    <div class="flex items-center space-x-4 pl-6 border-l-2 text-DBlue border-DBlue">
+                                                        <div class="flex ">
+                                                            <a href="./index.php" target="_blank">
+                                                                <span>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                                    </svg>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="flex ">
+                                                            <a href="https://rocketserve.app/">
+                                                                <span>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                                                    </svg>
+                                                                </span>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="flex lg:hidden flex-shrink-0 items-center">
+                                    <img class="h-10 lg:h-14 w-auto pr-2" src="./src/img/logo/sanantonio-logo4.jpeg" alt="Your Company">
+                                    <div class="">
+                                        <p class="font-bold text-DBlue ">DiamondBack Process Server</p>
+                                        <p class="text-xs font-medium text-DBred">San Antonio Texas</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="xl:hidden hidden relative z-50 backdrop-blur-md" id="mobile-menu">
+                            <div class="flex space-x-5 text-neutral-700 px-4">
+                                <span class="size-5">
+                                    <a href="https://www.facebook.com/share/n5qcfYvntHE41fGo/?mibextid=qi2Omg">                                                
+                                        <img src="./src/img/icons/facebook.png" alt=""> 
+                                    </a>
+                                </span>
+                                <span class="size-5">
+                                    <a href="https://www.instagram.com/diamondbackprocessserver?igsh=MWxmM3Q3c2R0NW40ag%3D%3D">
+                                        <img src="./src/img/icons/instagram.png" alt="">
+                                    </a>
+                                </span>
+                                <span class="size-5">
+                                    <a href="
+                                    https://www.tiktok.com/@diamondbackprocessserver?_t=8o2xbWznK3C&_r=1">
+                                        <img src="./src/img/icons/tik-tok.png" alt="">
+                                    </a>
+                                </span>
+                                <span class="size-5">
+                                    <a href="https://g.page/r/CTNkZmOIdLn1EBM/review">
+                                        <img src="./src/img/icons/map-marker.png" alt="">
+                                    </a>
+                                </span>
+                            </div>
                             <div class="space-y-1 px-2 pb-3 pt-2">
                                 <a href="./index.html" class="bg-neutral-600 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">HOME</a>
                                 <a href="#services" class="text-neutral-600 hover:bg-neutral-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium">SERVICES</a>
@@ -362,24 +433,29 @@
                         </div>
                     </nav>
                     <div class="container max-w-[100rem] mx-auto h-[88dvh] relative z-30" id="homebg-container">
-                        <div class="grid grid-cols-2 lg:grid-cols-2 h-full pb-16">
-                            <div class="flex items-center justify-end">
-                                <div class="flex flex-col justify-end items-start text-neutral-800 max-w-[60rem]">
-                                    <h1 class="text-8xl font-bold mb-3 text-left tracking-wider">Boots on</h1>
-                                    <h1 class="text-8xl font-bold mb-8 text-left tracking-wider">The <span class="text-DBlue font-black">Gro</span><span class="text-DBred font-black">und.</span></h1>
-                                    <p class="text-md font-normal mb-8 text-left tracking-wider">We serve Corporation Service Company, USAA Garrison Property and Casualty Insurance Company, and all of Texas.</p>
-                                    <a href="./pricing.html">
+                        <!-- Background Slideshow -->
+                        <div class="bg-slideshow absolute md:hidden inset-0 z-0"></div>
+                        <!-- Blue Overlay -->
+                        <div class="absolute md:hidden inset-0 bg-gray-800 opacity-85 z-10"></div>
+                        <!-- Content -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 h-full pb-16 relative z-20">
+                            <div class="flex items-center">
+                                <div class="flex flex-col items-center md:items-start text-center md:text-start text-white max-w-[60rem]">
+                                    <h1 class="text-6xl font-bold mb-3 tracking-wider md:text-neutral-800">Boots on</h1>
+                                    <h1 class="text-6xl font-bold mb-8 tracking-wider md:text-neutral-800">The <span class="text-DBlue font-black">Gro</span><span class="text-DBred font-black">und.</span></h1>
+                                    <p class="text-md font-normal mb-8 tracking-wider md:text-neutral-800">We serve Corporation Service Company, USAA Garrison Property and Casualty Insurance Company, and all of Texas.</p>
+                                    <a href="./pricing.html" class="">
                                         <button class="flex text-sm py-4 rounded px-12 bg-DBlue text-white justify-center font-medium shadow-md shadow-DBlue mb-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-white duration-500">
-                                        Order Online Now<span class="pl-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                                            </svg>
-                                          </span>
+                                            Order Online Now<span class="pl-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                                </svg>
+                                            </span>
                                         </button>
                                     </a>
                                 </div>
                             </div>
-                            <div class="flex justify-end items-center" id="home-rightside">
+                            <div class="lg:flex hidden justify-end items-center" id="home-rightside">
                                 <div id="default-carousel" class="relative w-full" data-carousel="slide">
                                     <!-- Carousel wrapper -->
                                     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
@@ -432,7 +508,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                      </div>
+                      
                 </div>
             </section> 
         </div>
@@ -443,8 +520,8 @@
             <section id="about" class="bg-DBlue bg-cover bg-bottom bg-no-repeat border-b-4 border-DBred">
                 <div class="w-full h-full about-bgoverlay overflow-hidden">
                     <div class="mx-8 md:container md:mx-auto py-16">
-                        <div class="flex justify-around">
-                            <div class="w-1/4">
+                        <div class="flex flex-col md:flex-row justify-around">
+                            <div class="md:w-1/4 mb-4 md:mb-0">
                                 <div class="border-8 border-gray-100 flex items-center justify-center w-full text-white p-4">
                                     <div class="flex justify-center w-1/2">
                                         <h1 class="text-white font-bold text-8xl">5+</h1>
@@ -454,15 +531,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col w-1/4">
-                                <div class="text-DBred font-bold">
+                            <div class="flex flex-col md:w-1/4">
+                                <div class="text-DBred font-bold text-lg">
                                     <p>About us</p>
                                 </div>
                                 <div class="text-white font-black tracking-wider">
                                     <p class="text-4xl break-words leading-normal">Exceeding your Expectations, One Serve at a Time!</p>
                                 </div>
                             </div>
-                            <div class="flex flex-col w-1/4">
+                            <div class="flex flex-col md:w-1/4">
                                 <div class="font-thin leading-2 tracking-wide text-white mb-4">
                                     <p class="break-words">As a Trusted Texas Legal Support Services Company, we are dedicated to ensuring that your legal documents get the attention and quality service you deserve. We offer a range of legal support services to assist law firms, attorneys, businesses, and individuals in Texas.</p>
                                 </div>
@@ -501,116 +578,127 @@
                     </span>
                 </div>
                 <div class="w-2/3 bordergradient mb-8 mt-8"></div>
-                <div class="flex justify-center space-x-8">
-                    <div class="flex flex-col items-center justify-start w-1/4">
-                        <span class="h-36 flex flex-col items-center mb-3">
-                            <img src="./src/img/gallery/undraw-process.svg" alt="" class="size-28">
-                            <h4 class="text-DBlue font-medium text-lg break-words text-center">Process Serving</h4>
-                        </span>
-                        <div class="flex flex-col items-center">
-                            <p class="text-center text-sm pb-2">We serve all types of documents in Texas including subpoenas, complaints, summons, family law, and documents to registered agents.</p>
-                            
+                <div class="flex flex-col items-center md:flex-row justify-center space-x-8">
+                    <div class="grid grid-cols-2 mb-8 md:mb-0">
+                        <div class="flex flex-col items-center justify-start">
+                            <span class="h-36 flex flex-col items-center mb-3">
+                                <img src="./src/img/gallery/undraw-process.svg" alt="" class="size-28">
+                                <h4 class="text-DBlue font-medium text-lg break-words text-center">Process Serving</h4>
+                            </span>
+                            <div class="flex flex-col items-center">
+                                <p class="text-center text-sm pb-2">We serve all types of documents in Texas including subpoenas, complaints, summons, family law, and documents to registered agents.</p>
+                                
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center justify-start">
+                            <span class="h-36 flex flex-col items-center mb-3">
+                                <img src="./src/img/gallery/undraw-courtfiling.svg" alt="" class="size-28">
+                                <h4 class="text-DBlue font-medium text-lg break-words text-center">Court Filing</h4>
+                            </span>
+                            <div class="flex flex-col items-center">
+                                <p class="text-center text-sm pb-2">Our Court filing service may offer support for a range of documents, including lawsuits, petitions, contracts, and other legal instruments.</p>
+                                
+                            </div>
                         </div>
                     </div>
-                    <div class="flex flex-col items-center justify-start w-1/4">
-                        <span class="h-36 flex flex-col items-center mb-3">
-                            <img src="./src/img/gallery/undraw-courtfiling.svg" alt="" class="size-28">
-                            <h4 class="text-DBlue font-medium text-lg break-words text-center">Court Filing</h4>
-                        </span>
-                        <div class="flex flex-col items-center">
-                            <p class="text-center text-sm pb-2">Our Court filing service may offer support for a range of documents, including lawsuits, petitions, contracts, and other legal instruments.</p>
-                            
+                    <div class="grid grid-cols-2">
+                        <div class="flex flex-col items-center justify-start">
+                            <span class="h-36 flex flex-col items-center mb-3">
+                                <img src="./src/img/gallery/undraw-retrieve.svg" alt="" class="size-28">
+                                <h4 class="text-DBlue font-medium text-lg break-words text-center">Document Retrieval</h4>
+                            </span>
+                            <div class="flex flex-col items-center">
+                                <p class="text-center text-sm pb-2">Document retrieval services are professional services that specialize in obtaining and delivering specific documents or information on behalf of individuals, businesses, or legal entities.</p>
+                                
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex flex-col items-center justify-start w-1/4">
-                        <span class="h-36 flex flex-col items-center mb-3">
-                            <img src="./src/img/gallery/undraw-retrieve.svg" alt="" class="size-28">
-                            <h4 class="text-DBlue font-medium text-lg break-words text-center">Document Retrieval</h4>
-                        </span>
-                        <div class="flex flex-col items-center">
-                            <p class="text-center text-sm pb-2">Document retrieval services are professional services that specialize in obtaining and delivering specific documents or information on behalf of individuals, businesses, or legal entities.</p>
-                            
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-center justify-start w-1/4">
-                        <span class="h-36 flex flex-col items-center mb-3">
-                            <img src="./src/img/gallery/undraw-evidence.svg" alt="" class="size-28">
-                            <h4 class="text-DBlue font-medium text-lg break-words text-center">Address Location Search</h4>
-                        </span>
-                        <div class="flex flex-col items-center">
-                            <p class="text-center text-sm pb-2">Our Location services help you find a good address to serve individuals in a quick and efficient fashion.</p>
-                            
+                        <div class="flex flex-col items-center justify-start">
+                            <span class="h-36 flex flex-col items-center mb-3">
+                                <img src="./src/img/gallery/undraw-evidence.svg" alt="" class="size-28">
+                                <h4 class="text-DBlue font-medium text-lg break-words text-center">Address Location Search</h4>
+                            </span>
+                            <div class="flex flex-col items-center">
+                                <p class="text-center text-sm pb-2">Our Location services help you find a good address to serve individuals in a quick and efficient fashion.</p>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="chooseus" class="">
-            <div class="mx-8 md:container md:mx-auto py-16 bg-DBlue rounded-xl border-4 border-DBred shadow-xl shadow-gray-600 div7">
-                <div class="flex flex-col items-center text-white pb-8">
+            <div class="mx-8 md:container md:mx-auto pt-16 pb-0 md:pb-14 bg-DBlue rounded-xl border-4 border-DBred shadow-xl shadow-gray-600">
+                <div class="flex flex-col items-center text-center text-white pb-8">
                     <span class="mb-4 size-24">
                         <img src="./src/img/icons/best-choice.png" alt="Best Choice Icon">
                     </span>
-                    <p class="font-bold text-sm pb-2">WHY CHOOSE US</p>
+                    <p class="font-bold text-xs md:text-sm pb-2">WHY CHOOSE US</p>
                     <span class="">
-                        <h1 class="break-words text-5xl font-bold">Legal Support Done Right!</h1>
+                        <h1 class="break-words text-2xl md:text-5xl font-bold">Legal Support Done Right!</h1>
                     </span>
                 </div>
                 <div class="bordergradient1 my-8"></div>
-                <div class="flex justify-center text-white divide-x divide-dotted divide-DBlue pt-8">
-                    <div class="flex flex-col items-center justify-start p-4 w-1/6">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                            </svg>
-                        </span>
-                        <h4 class="text-white font-medium text-lg break-words text-center">Competitive Pricing</h4>
+                <div class="flex flex-col md:flex-row justify-center text-white divide-x divide-dotted divide-DBlue pt-8">
+                    <div class="grid grid-cols-2 mb-8 md:mb-0 md:w-1/3">
+                        <div class="flex flex-col items-center justify-start p-4">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 md:size-10">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                            </span>
+                            <h4 class="text-white font-medium text-sm md:text-lg break-words text-center">Competitive Pricing</h4>
+                        </div>
+                        <div class="flex flex-col items-center justify-start p-4">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 md:size-10">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                            </span>
+                            <h4 class="text-white font-medium text-sm md:text-lg break-words text-center">24/7 online access to our client portal</h4>
+                        </div>
+                        
                     </div>
-                    <div class="flex flex-col items-center justify-start p-4 w-1/6">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                            </svg>
-                        </span>
-                        <h4 class="text-white font-medium text-lg break-words text-center">24/7 online access to our client portal</h4>
+                    <div class="grid grid-cols-2 mb-8 md:mb-0 md:w-1/3">
+                        <div class="flex flex-col items-center justify-start p-4">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 md:size-10">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                            </span>
+                            <h4 class="text-white font-medium text-sm md:text-lg break-words text-center">Photo evidence of attempts stamped with GPS, date, and time</h4>
+                        </div>
+                        <div class="flex flex-col items-center justify-start p-4">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 md:size-10">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                            </span>
+                            <h4 class="text-white font-medium text-sm md:text-lg break-words text-center" >Reliable status updates</h4>
+                        </div>
                     </div>
-                    <div class="flex flex-col items-center justify-start p-4 w-1/6">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                            </svg>
-                        </span>
-                        <h4 class="text-white font-medium text-lg break-words text-center">Photo evidence of attempts stamped with GPS, date, and time</h4>
-                    </div>
-                    <div class="flex flex-col items-center justify-start p-4 w-1/6">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                            </svg>
-                        </span>
-                        <h4 class="text-white font-medium text-lg break-words text-center" >Reliable status updates</h4>
-                    </div>
-                    <div class="flex flex-col items-center justify-start p-4 w-1/6">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                            </svg>
-                        </span>
-                        <h4 class="text-white text-DBluefont-medium text-lg break-words text-center">Exceptional customer service</h4>
-                    </div>
-                    <div class="flex flex-col items-center justify-start p-4 w-1/6">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                            </svg>
-                        </span>
-                        <h4 class="text-white font-medium text-lg break-words text-center">Efficient, fast, and accurate service</h4>
+                    <div class="grid grid-cols-2 mb-8 md:mb-0 md:w-1/3">
+                        <div class="flex flex-col items-center justify-start p-4">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 md:size-10">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                            </span>
+                            <h4 class="text-white text-DBluefont-medium text-sm md:text-lg break-words text-center">Exceptional customer service</h4>
+                        </div>
+                        <div class="flex flex-col items-center justify-start p-4">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 md:size-10">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                            </span>
+                            <h4 class="text-white font-medium text-sm md:text-lg break-words text-center">Efficient, fast, and accurate service</h4>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="pricing" class="my-24">
-            <div class="mx-8 md:container md:mx-auto py-16 rounded-lg">
+            <div class="mx-8 md:container md:mx-auto pt-14 pb-0 md:pb-14 rounded-lg">
                 <div class="flex flex-col items-center text-DBlue mb-2">
                     <p class="font-bold text-sm pb-2 text-DBred">Process Serving Pricing</p>
                     <span class="">
@@ -629,41 +717,33 @@
                         </p>
                     </a>
                 </div>
-                <div class="flex space-x-4 mb-8">
-                    <div class="flex justify-center space-x-4 items-center w-1/4 border-2 border-gray-300 shadow-xl shadow-gray-400 rounded-lg p-4">
-                        <span class="size-14 flex items-center">
-                            <img src="./src/img/icons/number-3.png" alt="Best Price Icon">
-                        </span>
-                        <div class="flex flex-col">
-                            <h1 class="text-2xl font-bold text-DBlue">Standard Service</h1>
-                            <p class="text-sm font-medium">1st Attempt within 3 days</p>
+                <div class="flex flex-col space-x-0 md:space-x-8 justify-center items-center md:flex-row mb-8">
+                    <div class="grid grid-cols-2 mb-8 md:mb-0 space-x-4 md:space-x-8 md:w-1/2">
+                        <div class="flex justify-center space-x-0 md:space-x-4 items-center border-2 border-gray-300 shadow-md shadow-DBred rounded-lg p-4">
+                            <div class="flex flex-col items-start text-left md:items-center md:text-center">
+                                <h1 class="text-2xl font-bold text-DBlue">Standard Service</h1>
+                                <p class="text-sm font-medium">1st Attempt within 3 days</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center space-x-0 md:space-x-4 items-center border-2 border-gray-300 shadow-md shadow-DBred rounded-lg p-4">
+                            <div class="flex flex-col items-start text-left md:items-center md:text-center">
+                                <h1 class="text-2xl font-bold text-DBlue">Rush Service</h1>
+                                <p class="text-sm font-medium">1st Attempt within 1 day</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex justify-center space-x-4 items-center w-1/4 border-2 border-gray-300 shadow-xl shadow-gray-400 rounded-lg p-4">
-                        <span class="size-14 flex items-center">
-                            <img src="./src/img/icons/number-1.png" alt="Best Price Icon">
-                        </span>
-                        <div class="flex flex-col">
-                            <h1 class="text-2xl font-bold text-DBlue">Rush Service</h1>
-                            <p class="text-sm font-medium">1st Attempt within 1 day</p>
+                    <div class="grid grid-cols-2 space-x-4 md:space-x-8 md:w-1/2">
+                        <div class="flex justify-center space-x-0 md:space-x-4 items-center border-2 border-gray-300 shadow-md shadow-DBred rounded-lg p-4">
+                            <div class="flex flex-col items-start text-left md:items-center md:text-center">
+                                <h1 class="text-2xl font-bold text-DBlue">Sameday Service</h1>
+                                <p class="text-sm font-medium">1st Attempt made Same day!</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex justify-center space-x-4 items-center w-1/4 border-2 border-gray-300 shadow-xl shadow-gray-400 rounded-lg p-4">
-                        <span class="size-14 flex items-center">
-                            <img src="./src/img/icons/best-price (1).png" alt="Best Price Icon">
-                        </span>
-                        <div class="flex flex-col">
-                            <h1 class="text-2xl font-bold text-DBlue">Sameday Service</h1>
-                            <p class="text-sm font-medium">1st Attempt made Same day!</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-center space-x-4 items-center w-1/4 border-2 border-gray-300 shadow-xl shadow-gray-400 rounded-lg p-4">
-                        <span class="size-14 flex items-center">
-                            <img src="./src/img/icons/best-price (1).png" alt="Best Price Icon">
-                        </span>
-                        <div class="flex flex-col">
-                            <h1 class="text-2xl font-bold text-DBlue">Immediate Service</h1>
-                            <p class="text-sm font-medium">1st Attempt made within 4 hrs or less</p>
+                        <div class="flex justify-center space-x-0 md:space-x-4 items-center border-2 border-gray-300 shadow-md shadow-DBred rounded-lg p-4">
+                            <div class="flex flex-col items-start text-left md:items-center md:text-center">
+                                <h1 class="text-2xl font-bold text-DBlue">Immediate Service</h1>
+                                <p class="text-sm font-medium">1st Attempt made within 4 hrs or less</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -673,62 +753,130 @@
         <section id="feedback" class="bg-white bg-opacity-70 z-20">
             <div class="mx-8 md:container md:mx-auto my-12" id="contactsection">
             <div class="flex flex-col">
-                <div class="mb-14">
+                <div class="mb-10">
                     <p class="font-bold text-base text-DBred pb-2">OUR CLIENTS</p>
                     <span class="">
                         <h1 class="break-words text-5xl font-black tracking-tight text-DBlue">Here's what our satisfied clients are saying</h1>
                     </span>
                 </div>
                 <div class="flex space-x-8">
-                    <div class="flex space-x-8">
-                        <div class="flex space-x-8">
-                            <div class="w-1/4 flex flex-grow flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl shadow-xl shadow-red-600">
-                                <div class="w-3/4 flex flex-col justify-center mb-4">
+                    <div class="flex flex-col md:flex-col space-x-0">
+                        <div class="z-10 flex justify-center items-center mb-8">
+                            <div class="relative flex flex-col justify-center items-center border-2 p-4 border-gray-200 rounded-xl shadow-xl shadow-red-300 bg-white">        
+                                <div class="w-3/4 flex flex-col justify-center z-20">
                                     <div class="flex justify-center">
-                                    <img src="./src/img/team/10.webp" alt="" class="size-24 rounded-full">
+                                    <img src="./src/img/reviews/kellymatich.png" alt="Kelly Matich" class="w-24 h-24 rounded-full">
                                     </div>
-                                    <q class="break-words text-center pt-4 text-sm leading-relaxed">Chris is a true professional and cares deeply about doing quality work for his clients. He has a collaborative philosophy about process service and is always very responsive. I highly recommend!</q>
+                                    <q class="break-words text-center pt-4 text-sm leading-relaxed">Chris was amazing I called him with a lawsuit I was trying to get served for 4 months and he served within 24 hrs of me sending him all the documents. I put him in contact with my lawyer and he sent everything to them and they filed through the court she was served. <span class="font-bold text-DBlue">Absolutely amazing company. Chris is the owner he is outstanding.</span></q>
+                                    <div class="flex space-x-2 mt-4 justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="leading-relaxed flex flex-col items-center z-20">
+                                    <h4 class="font-medium">Kelly Matich</h4>
+                                    <p class="text-xs">Our Client</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
+                            <div class="md:w-1/3 flex flex-grow flex-col justify-center items-center p-4 border-2 border-gray-200 rounded-xl shadow-lg shadow-red-200">
+                                <div class="w-3/4 flex flex-col justify-center">
+                                    <div class="flex justify-center">
+                                    <img src="./src/img/reviews/tracysiedler.png" alt="Tracy Siedler" class="size-16 rounded-full">
+                                    </div>
+                                    <q class="break-words text-center pt-4 text-xs leading-relaxed">This guy is freaking awesome. I am in Illinois and needed documents served in San Antonio Texas and he literally had they guy served within an hour!! Highly recommend!</q>
+                                    <div class="flex space-x-2 mt-4 justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="leading-relaxed flex flex-col items-center">
+                                    <h4 class="font-medium">Tracy Siedler</h4>
+                                    <p class="text-xs">Our Client.</p>  
+                                </div>
+                            </div>
+                            <div class="md:w-1/3 flex flex-grow flex-col justify-center items-center p-4 border-2 border-gray-200 rounded-xl shadow-lg shadow-red-200">
+                                <div class="w-3/4 flex flex-col justify-center">
+                                    <div class="flex justify-center">
+                                    <img src="./src/img/reviews/teagodfreey.png" alt="Tea Godfrey" class="size-16 rounded-full">
+                                    </div>
+                                    <q class="break-words text-center pt-4 text-xs leading-relaxed">Chris is a true professional and cares deeply about doing quality work for his clients. He has a collaborative philosophy about process service and is always very responsive. I highly recommend!</q>
+                                    <div class="flex space-x-2 mt-4 justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
                                 </div>
                                 <div class="leading-relaxed flex flex-col items-center">
                                     <h4 class="font-medium">Tea Godfrey</h4>
                                     <p class="text-xs">Our Client</p>
                                 </div>
                             </div>
-                            <div class="w-1/12 flex flex-grow flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl shadow-xl shadow-red-600">
-                                <div class="w-3/4 flex flex-col justify-center mb-4">
+                            <div class="md:w-1/3 flex flex-grow flex-col justify-center items-center p-4 border-2 border-gray-200 rounded-xl shadow-lg shadow-red-200">
+                                <div class="w-3/4 flex flex-col justify-center">
                                     <div class="flex justify-center">
-                                    <img src="./src/img/team/1.webp" alt="" class="size-24 rounded-full">
+                                    <img src="./src/img/reviews/whitneyhouchin.png" alt="Whitney Houchin" class="size-16 rounded-full">
                                     </div>
-                                    <q class="break-words text-center pt-4 text-sm leading-relaxed">His team is right on target as professional servers. Just one job and you will know he’s your guy for TX.</q>
+                                    <q class="break-words text-center pt-4 text-xs leading-relaxed">Hired Chris for a speedy service job...he did GREAT! got the guy served so fast, with pictures and video footage to boot. Invoicing was very easy to pay and the return of service was in my inbox within 30 minutes after service. Thank you guys!</q>
+                                    <div class="flex space-x-2 mt-4 justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" class="size-6 drop-shadow-lg">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
                                 </div>
                                 <div class="leading-relaxed flex flex-col items-center">
-                                    <h4 class="font-medium">Dawn Hartwell</h4>
-                                    <p class="text-xs">Our Client.</p>  
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex space-x-8">
-                            <div class="w-1/12 flex flex-grow flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl shadow-xl shadow-red-600">
-                                <div class="w-3/4 flex flex-col justify-center mb-4">
-                                    <div class="flex justify-center">
-                                    <img src="./src/img/team/2.webp" alt="" class="size-24 rounded-full">
-                                    </div>
-                                    <q class="break-words text-center pt-4 text-sm leading-relaxed">I sent a rush service and Chris did a great job. Served and affidavit back within 24 hours.  Thanks for your great service.</q>
-                                </div>
-                                <div class="leading-relaxed flex flex-col items-center">
-                                    <h4 class="font-medium">Karen Wagner</h4>
-                                    <p class="text-xs">Our Client</p>
-                                </div>
-                            </div>
-                            <div class="w-1/12 flex flex-grow flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl shadow-xl shadow-red-600">
-                                <div class="w-3/4 flex flex-col justify-center mb-4">
-                                    <div class="flex justify-center">
-                                    <img src="./src/img/team/3.webp" alt="" class="size-24 rounded-full">
-                                    </div>
-                                    <q class="break-words text-center pt-4 text-sm leading-relaxed">Mr. McCloy was straight-forward and easy to deal with.  I wish all service was this easy to deal with.</q>
-                                </div>
-                                <div class="leading-relaxed flex flex-col items-center">
-                                    <h4 class="font-medium">Steve Seuhs</h4>
+                                    <h4 class="font-medium">Whitney Houchin</h4>
                                     <p class="text-xs">Our Client.</p>  
                                 </div>
                             </div>
@@ -738,156 +886,156 @@
             </div>
             </div>
         </section>
-            <section id="contact" class="bg-white bg-opacity-70 z-20">
-                <div class="container mx-auto mb-16 mt-12">
-                    <div class="p-10 rounded-md border-2 border-gray-100 shadow-lg shadow-red-200">
-                        <div class="relative">
-                            <div class="absolute z-10">
-                                <img src="./src/img/imports/13.png" alt="">
+        <section id="contact" class="bg-white bg-opacity-70 z-20">
+            <div class="container mx-auto mb-16 mt-12">
+                <div class="p-10 rounded-md border-2 border-gray-100 shadow-lg shadow-red-200">
+                    <div class="relative">
+                        <div class="absolute z-10">
+                            <img src="./src/img/imports/13.png" alt="">
+                        </div>
+                        <div class="flex flex-col md:flex-row z-20">
+                            <div class="md:w-1/2">
+                                <div class="w-2/3 mb-8">
+                                    <p class="text-DBred font-bold text-sm mb-2">Contact Us</p>
+                                    <h2 class="text-3xl font-black mb-4">Get In Touch With Us</h2>
+                                    <p class="break-words">Email, Call, or Fill-up the form to learn more about our Services. We Always Make Sure To Reply You As Soon As Possible.</p>
+                                </div>
+                                <div class="w-2/3 mb-4">
+                                    <div class="flex items-start">
+                                        <div class="bg-DBlue p-4 text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                            </svg>
+                                        </div>
+                                        <div class="flex flex-col items-start pl-4">
+                                            <h4 class="font-semibold text-lg">Our Location #1</h4>
+                                            <p class="text-sm">12370 Potranco Rd., Ste 207 #1229. San Antonio, TX 78253</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-2/3 mb-4">
+                                    <div class="flex items-start">
+                                        <div class="bg-DBlue p-4 text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                            </svg>
+                                        </div>
+                                        <div class="flex flex-col items-start pl-4">
+                                            <h4 class="font-semibold text-lg">Our Location #2</h4>
+                                            <p class="text-sm">1401 Lavaca Street Unit #7099. Austin, Texas 78701</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-2/3 mb-4">
+                                    <div class="flex items-start">
+                                        <div class="bg-DBlue p-4 text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                                            </svg>
+                                        </div>
+                                        <div class="flex flex-col items-start pl-4">
+                                            <h4 class="font-semibold text-lg">Our Phone Number</h4>
+                                            <p class="text-sm">(726)-800-3612</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-2/3 mb-4">
+                                    <div class="flex items-start">
+                                        <div class="bg-DBlue p-4 text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25" />
+                                            </svg>
+                                        </div>
+                                        <div class="flex flex-col items-start pl-4">
+                                            <h4 class="font-semibold text-lg">Our Email</h4>
+                                            <p class="text-sm">diamondbackps@outlook.com</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex z-20">
-                                <div class="w-1/2">
-                                    <div class="w-2/3 mb-8">
-                                        <p class="text-DBred font-bold text-sm mb-2">Contact Us</p>
-                                        <h2 class="text-3xl font-black mb-4">Get In Touch With Us</h2>
-                                        <p class="break-words">Email, Call, or Fill-up the form to learn more about our Services. We Always Make Sure To Reply You As Soon As Possible.</p>
-                                    </div>
-                                    <div class="w-2/3 mb-4">
-                                        <div class="flex items-center">
-                                            <div class="bg-DBlue p-4 text-white">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                                                </svg>
-                                            </div>
-                                            <div class="flex flex-col items-start pl-4">
-                                                <h4 class="font-semibold text-lg">Our Location #1</h4>
-                                                <p class="text-sm">12370 Potranco Rd., Ste 207 #1229. San Antonio, TX 78253</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="w-2/3 mb-4">
-                                        <div class="flex items-center">
-                                            <div class="bg-DBlue p-4 text-white">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                                                </svg>
-                                            </div>
-                                            <div class="flex flex-col items-start pl-4">
-                                                <h4 class="font-semibold text-lg">Our Location #2</h4>
-                                                <p class="text-sm">1401 Lavaca Street Unit #7099. Austin, Texas 78701</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="w-2/3 mb-4">
-                                        <div class="flex items-center">
-                                            <div class="bg-DBlue p-4 text-white">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-                                                </svg>
-                                            </div>
-                                            <div class="flex flex-col items-start pl-4">
-                                                <h4 class="font-semibold text-lg">Our Phone Number</h4>
-                                                <p class="text-sm">(726)-800-3612</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="w-2/3 mb-4">
-                                        <div class="flex items-center">
-                                            <div class="bg-DBlue p-4 text-white">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25" />
-                                                </svg>
-                                            </div>
-                                            <div class="flex flex-col items-start pl-4">
-                                                <h4 class="font-semibold text-lg">Our Email</h4>
-                                                <p class="text-sm">diamondbackps@outlook.com</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w-1/2 p-8">
-                                    <form action="" class="bg-DBlue p-4 rounded-lg">
-                                        <label for="first_name" class="block mb-2 text-sm font-medium text-white">Name</label>
-                                        <input type="text" id="first_name" class="mb-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="example1@gmail.com" required />
-                                        <label for="first_name" class="block mb-2 text-sm font-medium text-white">Email Address</label>
-                                        <input type="text" id="first_name" class="mb-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="example1@gmail.com" required />
-                                        <label for="first_name" class="block mb-2 text-sm font-medium text-white">Phone</label>
-                                        <input type="text" id="first_name" class="mb-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="example1@gmail.com" required />
-                                        <label for="message" class="block mb-2 text-sm font-medium text-white">Your message</label>
-                                        <textarea id="message" rows="4" class="mb-4 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-sm border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
-                                        <button class="p-2 bg-DBred text-white font-bold rounded-sm px-8 text-sm tracking-wide">SUBMIT</button>
-                                    </form>
-                                </div>
+                            <div class="md:w-1/2 md:p-8">
+                                <form action="" class="bg-DBlue p-4 rounded-lg">
+                                    <label for="first_name" class="block mb-2 text-sm font-medium text-white">Name</label>
+                                    <input type="text" id="first_name" class="mb-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="example1@gmail.com" required />
+                                    <label for="first_name" class="block mb-2 text-sm font-medium text-white">Email Address</label>
+                                    <input type="text" id="first_name" class="mb-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="example1@gmail.com" required />
+                                    <label for="first_name" class="block mb-2 text-sm font-medium text-white">Phone</label>
+                                    <input type="text" id="first_name" class="mb-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="example1@gmail.com" required />
+                                    <label for="message" class="block mb-2 text-sm font-medium text-white">Your message</label>
+                                    <textarea id="message" rows="4" class="mb-4 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-sm border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
+                                    <button class="p-2 bg-DBred text-white font-bold rounded-sm px-8 text-sm tracking-wide">SUBMIT</button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
         <div class="relative">
-            <div class="absolute flex items-center right-0 top-0 h-2 w-[100rem] bg-DBred z-20 angled-div4 div6">
-                    <div class="flex space-x-8 justify-end text-white items-center container max-w-[90rem] mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
+            <div class="absolute flex items-center right-0 top-0 h-[3%] md:h-[6%] w-[100rem] bg-DBred z-20 angled-div4 div6">
+                <div class="flex space-x-8 justify-end text-white items-center md:container md:max-w-[90rem] md:mx-auto z-40">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                </div>
             </div>
             <footer class="bg-cover bg-no-repeat bg-center">
                 <div class="footer-overlay bg-dcpn p-4 md:p-8 lg:p-12 xl:p-16 xl:py-12 ">
-                    <div class="border-b border-gray-400 flex flex-col items-center justify-center p-16">
+                    <div class="border-b border-gray-400 flex flex-col items-center justify-center p-8 py-16 md:p-16">
                         <div class="flex flex-col items-center leading-relaxed text-white mb-16">
                             <p class="tracking-wide font-medium mb-6">BOOTS ON THE <span class="text-DBred">GROUND!</span></p>
-                            <h1 class="text-6xl font-black">Ready to hire a Process Server?</h1>
+                            <h1 class="text-5xl font-black text-center">Ready to hire a Process Server?</h1>
                         </div>
                         <a href="https://rocketserve.app/diamondback/" target="_blank">
                             <p class="text-white flex bg-DBred py-4 px-8 rounded-full">Order Online Now <span class="pl-2">
@@ -898,7 +1046,7 @@
                             </p>
                         </a>
                     </div>
-                    <div class="flex flex-col md:flex-row justify-center space-x-8 mt-8">
+                    <div class="flex flex-col md:flex-row justify-center md:space-x-8 mt-8">
                         <div class="flex flex-col">
                             <div class="flex mb-6">
                                 <img class="h-20 w-auto pr-2" src="./src/img/logo/sanantonio-logo4.jpeg" alt="Your Company">
@@ -924,9 +1072,9 @@
                                 <p>726-800-3612</p>
                                 <p>diamondbackps@outlook.com</p>
                             </div>
-                            <div class="break-words space-y-2 max-w-80 text-white mb-8 text-sm">
-                                <h4 class="font-bold text-lg text-white mb-8">Social Media</h4>
-                                <div class="flex space-x-5 bg-white p-2 rounded-full">
+                            <div class="break-words space-y-2 max-w-80 text-white mb-4 text-sm">
+                                <h4 class="font-bold text-lg text-white mb-4 md:mb-8">Social Media</h4>
+                                <div class="flex w-fit px-6 space-x-5 bg-white p-2 rounded-full">
                                     <span class="size-4">
                                         <a href="https://www.facebook.com/share/n5qcfYvntHE41fGo/?mibextid=qi2Omg">                                                
                                             <img src="./src/img/icons/facebook.png" alt=""> 
