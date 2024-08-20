@@ -135,38 +135,37 @@
             <section class="bg-center bg-cover bg-white" id="price">
                 <div class="w-full bg-overlay overflow-hidden">
                     <nav class="z-30">
-                        <div class="">
-                            <div class="grid grid-cols-2 lg:grid-cols-2 sharpcontainer">
-                                <div class="ml-36 flex px-4 items-center space-x-4 angled-div div1">
-                                    <div class="break-words space-y-2 max-w-80 text-white mb-8 text-sm">
-                                        <h4 class="font-bold text-lg text-white mb-8">Social Media</h4>
+                        <div class="hidden md:block">
+                            <div class="grid grid-cols-2 lg:grid-cols-2 h-[30px] md:h-[50px] sharpcontainer">
+                                <div class="ml-36 hidden md:flex px-4 items-center space-x-4 angled-div div1">
+                                    <div class="flex items-center max-w-80 text-sm">
                                         <div class="flex space-x-5 bg-white p-2 rounded-full">
                                             <span class="size-4">
                                                 <a href="https://www.facebook.com/share/n5qcfYvntHE41fGo/?mibextid=qi2Omg">                                                
-                                                    <img src="./src/img/icons/facebook.png" alt=""> 
+                                                    <img loading="lazy" src="./src/img/icons/facebook.png" alt="Facebook"> 
                                                 </a>
                                             </span>
                                             <span class="size-4">
                                                 <a href="https://www.instagram.com/diamondbackprocessserver?igsh=MWxmM3Q3c2R0NW40ag%3D%3D">
-                                                    <img src="./src/img/icons/instagram.png" alt="">
+                                                    <img loading="lazy" src="./src/img/icons/instagram.png" alt="Instagram">
                                                 </a>
                                             </span>
                                             <span class="size-4">
                                                 <a href="
                                                 https://www.tiktok.com/@diamondbackprocessserver?_t=8o2xbWznK3C&_r=1">
-                                                    <img src="./src/img/icons/tik-tok.png" alt="">
+                                                    <img loading="lazy" src="./src/img/icons/tik-tok.png" alt="Tiktok">
                                                 </a>
                                             </span>
                                             <span class="size-4">
                                                 <a href="https://g.page/r/CTNkZmOIdLn1EBM/review">
-                                                    <img src="./src/img/icons/map-marker.png" alt="">
+                                                    <img loading="lazy" src="./src/img/icons/map-marker.png" alt="Google Map">
                                                 </a>
                                             </span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="flex bg-DBlue text-neutral-100 angled-div div2">
-                                    <div class="mr-36 flex space-x-4 text-sm font-light">
+                                    <div class="mr-36 flex space-x-4 text-2xs md:text-sm font-light">
                                         <div class="flex items-center">
                                             <span class="pr-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
@@ -181,9 +180,9 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
                                                 </svg>
                                             </span>
-                                            <p>Call us: +844 1255 668 333</p>
+                                            <p >Call us: +726 800 3612</p>
                                         </div>
-                                        <a href="./pricing.html" target="_blank">
+                                        <a href="./pricing.html" target="_blank" class="hidden md:block">
                                             <div class="flex items-center bg-DBred text-white text-xs font-bold px-6 py-[4px]">
                                                 REQUEST A QOUTE TODAY <span class="pl-2">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -196,77 +195,136 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="max-w-[100rem] mx-auto py-2">
-                            <div class="relative flex h-16 items-center justify-between">
-                            <div class="absolute inset-y-0 left-0 flex items-center lg:hidden">
-                                <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-neutral-600 hover:bg-neutral-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" id="menu-button">
-                                <span class="sr-only">Open main menu</span>
-                                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                </svg>
-                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                                </button>
+                        <div class="flex justify-end md:hidden bg-DBlue">
+                            <div class="p-2 flex space-x-4 text-xs font-medium text-white">
+                                <div class="flex items-center">
+                                    <span class="pr-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                        </svg>
+                                    </span>
+                                    <p>diamondbackps@outlook.com</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="pr-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+                                        </svg>
+                                    </span>
+                                    <p >Call us: +726 800 3612</p>
+                                </div>
+                                <a href="./pricing.html" target="_blank" class="hidden md:block">
+                                    <div class="flex items-center bg-DBred text-white text-xs font-bold px-6 py-[4px]">
+                                        REQUEST A QOUTE TODAY <span class="pl-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                            </svg>
+                                            </span>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="absolute inset-y-0 right-0 items-center hidden lg:flex xl:hidden">
-                                <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-neutral-600 hover:bg-neutral-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu2" aria-expanded="false" id="menu-button2">
+                        </div>
+                        <div class="max-w-[100rem] mx-auto py-2">
+                            <div class="relative flex h-16 items-center justify-center">
+                                <div class="absolute inset-y-0 left-0 flex items-center lg:hidden">
+                                    <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-neutral-600 hover:bg-neutral-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" id="menu-button">
                                     <span class="sr-only">Open main menu</span>
                                     <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                                     </svg>
                                     <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                                     </svg>
-                                </button>
-                            </div>
-                            <div class="flex flex-1 items-center justify-center sm:items-center sm:justify-between">
-                                <div class="hidden lg:flex items-center">
-                                    <div class="flex flex-shrink-0 items-center">
-                                        <img class="h-10 lg:h-14 w-auto pr-2" src="./src/img/logo/sanantonio-logo4.jpeg" alt="Your Company">
-                                        <div class="">
-                                            <p class="font-bold text-DBlue ">DiamondBack Process Server</p>
-                                            <p class="text-xs font-medium text-DBred">San Antonio Texas</p>
+                                    </button>
+                                </div>
+                                <div class="absolute inset-y-0 right-0 items-center hidden lg:flex xl:hidden">
+                                    <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-neutral-600 hover:bg-neutral-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu2" aria-expanded="false" id="menu-button2">
+                                        <span class="sr-only">Open main menu</span>
+                                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                        </svg>
+                                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="hidden lg:flex flex-1 items-center justify-center sm:items-center sm:justify-between">
+                                    <div class="hidden lg:block items-center">
+                                        <div class="flex flex-shrink-0 items-center">
+                                            <img class="h-10 lg:h-14 w-auto pr-2" src="./src/img/logo/sanantonio-logo4.jpeg" alt="Your Company">
+                                            <div class="">
+                                                <p class="font-bold text-DBlue ">DiamondBack Process Server</p>
+                                                <p class="text-xs font-medium text-DBred">San Antonio Texas</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="hidden xl:block items-center relative z-30 ">
-                                    <div class="flex items-center">
-                                        <div class="sm:ml-6 hidden sm:block">
-                                            <div class="flex items-center space-x-6 text-neutral-600">
-                                                <a href="./index.html" class="block rounded-md px-3 py-2 text-sm font-bold" aria-current="page">HOME</a>
-                                                <a href="#services" class=" hover:text-white block rounded-md px-3 py-2 text-sm font-bold">SERVICES</a>
-                                                <a href="#about" class="hover:text-white block rounded-md px-3 py-2 text-sm font-bold">ABOUT</a>
-                                                <a href="#contact" class=" hover:text-white block rounded-md px-3 py-2 text-sm font-bold">CONTACT</a>
-                                                <a href="./blog.html" class=" hover:text-white block rounded-md px-3 py-2 text-sm font-bold">BLOGS</a>
-                                                <div class="flex items-center space-x-4 pl-6 border-l-2 text-DBlue border-DBlue">
-                                                    <div class="flex ">
-                                                        <a href="./index.php" target="_blank">
-                                                            <span>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                                                </svg>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <div class="flex ">
-                                                        <a href="https://rocketserve.app/">
-                                                            <span>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                                                                </svg>
-                                                            </span>
-                                                        </a>
+                                    <div class="hidden lg:block items-center relative z-30 ">
+                                        <div class="flex items-center">
+                                            <div class="sm:ml-6 hidden sm:block">
+                                                <div class="flex items-center space-x-6 text-neutral-600">
+                                                    <a href="./index.html" class="block rounded-md px-3 py-2 text-sm font-bold" aria-current="page">HOME</a>
+                                                    <a href="#services" class=" hover:text-white block rounded-md px-3 py-2 text-sm font-bold">SERVICES</a>
+                                                    <a href="#about" class="hover:text-white block rounded-md px-3 py-2 text-sm font-bold">ABOUT</a>
+                                                    <a href="#contact" class=" hover:text-white block rounded-md px-3 py-2 text-sm font-bold">CONTACT</a>
+                                                    <a href="./blog.html" class=" hover:text-white block rounded-md px-3 py-2 text-sm font-bold">BLOGS</a>
+                                                    <div class="flex items-center space-x-4 pl-6 border-l-2 text-DBlue border-DBlue">
+                                                        <div class="flex ">
+                                                            <a href="./index.php" target="_blank">
+                                                                <span>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                                    </svg>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="flex ">
+                                                            <a href="https://rocketserve.app/">
+                                                                <span>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                                                    </svg>
+                                                                </span>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="flex lg:hidden flex-shrink-0 items-center">
+                                    <img class="h-10 lg:h-14 w-auto pr-2" src="./src/img/logo/sanantonio-logo4.jpeg" alt="Your Company">
+                                    <div class="">
+                                        <p class="font-bold text-DBlue ">DiamondBack Process Server</p>
+                                        <p class="text-xs font-medium text-DBred">San Antonio Texas</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="xl:hidden hidden relative z-50 backdrop-blur-md" id="mobile-menu">
+                            <div class="flex space-x-5 text-neutral-700 px-4">
+                                <span class="size-5">
+                                    <a href="https://www.facebook.com/share/n5qcfYvntHE41fGo/?mibextid=qi2Omg">                                                
+                                        <img loading="lazy" src="./src/img/icons/facebook.png" alt=""> 
+                                    </a>
+                                </span>
+                                <span class="size-5">
+                                    <a href="https://www.instagram.com/diamondbackprocessserver?igsh=MWxmM3Q3c2R0NW40ag%3D%3D">
+                                        <img loading="lazy" src="./src/img/icons/instagram.png" alt="">
+                                    </a>
+                                </span>
+                                <span class="size-5">
+                                    <a href="
+                                    https://www.tiktok.com/@diamondbackprocessserver?_t=8o2xbWznK3C&_r=1">
+                                        <img loading="lazy" src="./src/img/icons/tik-tok.png" alt="">
+                                    </a>
+                                </span>
+                                <span class="size-5">
+                                    <a href="https://g.page/r/CTNkZmOIdLn1EBM/review">
+                                        <img loading="lazy" src="./src/img/icons/map-marker.png" alt="">
+                                    </a>
+                                </span>
+                            </div>
                             <div class="space-y-1 px-2 pb-3 pt-2">
                                 <a href="./index.html" class="bg-neutral-600 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">HOME</a>
                                 <a href="#services" class="text-neutral-600 hover:bg-neutral-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium">SERVICES</a>
@@ -293,9 +351,9 @@
                         </div>
                         <div class="mb-8">
                             <label for="first_name" class="mb-2 text-sm font-medium text-gray-900 dark:text-white flex items-center">Search for Blogs your Interested in.</label>
-                            <input type="search" class="rounded-lg border-2 border-gray-400 text-sm w-2/4" placeholder="Search Blogs...">
+                            <input type="search" class="rounded-lg border-2 border-gray-400 text-sm w-full md:w-2/4" placeholder="Search Blogs...">
                         </div>
-                        <div class="grid grid-cols-4">
+                        <div class="grid grid-cols-1 md:grid-cols-4">
                             <a href="">
                                 <div class="flex flex-col shadow-xl shadow-DBlue border-2 border-gray-300 rounded-lg">
                                     <div class="">
@@ -312,9 +370,9 @@
                 </div>
                 
             </section>
-        <div class="relative">
-            <div class="absolute flex items-center right-0 top-0 h-2 w-[100rem] bg-DBred z-20 angled-div4 div6">
-                    <div class="flex space-x-8 justify-end text-white items-center container max-w-[90rem] mx-auto">
+            <div class="relative">
+                <div class="absolute flex items-center right-0 top-0 h-[3%] md:h-[6%] w-[100rem] bg-DBred z-20 angled-div4 div6">
+                    <div class="flex space-x-8 justify-end text-white items-center md:container md:max-w-[90rem] md:mx-auto z-40">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
                             <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
                         </svg>
@@ -369,86 +427,86 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
                             <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
                         </svg>
-                    </div>
-            </div>
-            <footer class="bg-cover bg-no-repeat bg-center">
-                <div class="footer-overlay bg-dcpn p-4 md:p-8 lg:p-12 xl:p-16 xl:py-12 ">
-                    <div class="border-b border-gray-400 flex flex-col items-center justify-center p-16">
-                        <div class="flex flex-col items-center leading-relaxed text-white mb-16">
-                            <p class="tracking-wide font-medium mb-6">BOOTS ON THE <span class="text-DBred">GROUND!</span></p>
-                            <h1 class="text-6xl font-black">Ready to hire a Process Server?</h1>
-                        </div>
-                        <a href="https://rocketserve.app/diamondback/" target="_blank">
-                            <p class="text-white flex bg-DBred py-4 px-8 rounded-full">Order Online Now <span class="pl-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                                </svg>
-                            </span>
-                            </p>
-                        </a>
-                    </div>
-                    <div class="flex flex-col md:flex-row justify-center space-x-8 mt-8">
-                        <div class="flex flex-col">
-                            <div class="flex mb-6">
-                                <img class="h-20 w-auto pr-2" src="./src/img/logo/sanantonio-logo4.jpeg" alt="Your Company">
-                                <div class="">
-                                    <p class="font-normal text-xl text-white">DiamondBack Process Server</p>
-                                    <p class="text-base font-medium text-DBred">San Antonio Texas</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="size-16 mr-8 flex items-center">
-                                    <img src="./src/img/gallery/NAPPS.png" alt="">
-                                </div>
-                                <div class="size-14">
-                                    <img src="./src/img/gallery/TAPS.webp" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col md:flex-row md:space-x-8">
-                            <div class="break-words space-y-2 tracking-wide max-w-90 text-white mb-8 mr-8 text-sm">
-                                <h4 class="font-bold text-lg text-white mb-8">Contacts</h4>
-                                <p>12370 Potranco Rd., Ste 207 #1229. San Antonio, TX 78253</p>
-                                <p>1401 Lavaca Street Unit #7099. Austin, Texas 78701</p>
-                                <p>726-800-3612</p>
-                                <p>diamondbackps@outlook.com</p>
-                            </div>
-                            <div class="break-words space-y-2 max-w-80 text-white mb-8 text-sm">
-                                <h4 class="font-bold text-lg text-white mb-8">Social Media</h4>
-                                <div class="flex space-x-5 bg-white p-2 rounded-full">
-                                    <span class="size-4">
-                                        <a href="https://www.facebook.com/share/n5qcfYvntHE41fGo/?mibextid=qi2Omg">                                                
-                                            <img src="./src/img/icons/facebook.png" alt=""> 
-                                        </a>
-                                    </span>
-                                    <span class="size-4">
-                                        <a href="https://www.instagram.com/diamondbackprocessserver?igsh=MWxmM3Q3c2R0NW40ag%3D%3D">
-                                            <img src="./src/img/icons/instagram.png" alt="">
-                                        </a>
-                                    </span>
-                                    <span class="size-4">
-                                        <a href="
-                                        https://www.tiktok.com/@diamondbackprocessserver?_t=8o2xbWznK3C&_r=1">
-                                            <img src="./src/img/icons/tik-tok.png" alt="">
-                                        </a>
-                                    </span>
-                                    <span class="size-4">
-                                        <a href="https://g.page/r/CTNkZmOIdLn1EBM/review">
-                                            <img src="./src/img/icons/map-marker.png" alt="">
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex justify-center mt-4">
-                        <div class="flex flex-col items-center text-white text-xs">
-                            <p>©2024 All rights reserved. DiamondBack Process Service, LLC. Powered by <a href="#!" target="_blank">Zhyck Atienza</a></p>
-                        </div>
                     </div>
                 </div>
-            </footer> 
-        </div>
+                <footer class="bg-cover bg-no-repeat bg-center">
+                    <div class="footer-overlay bg-dcpn p-4 md:p-8 lg:p-12 xl:p-16 xl:py-12 ">
+                        <div class="border-b border-gray-400 flex flex-col items-center justify-center px-4 pt-16 pb-8 md:p-16">
+                            <div class="flex flex-col items-center leading-relaxed text-white mb-8 md:mb-16">
+                                <p class="tracking-wide font-medium mb-6">BOOTS ON THE <span class="text-DBred">GROUND!</span></p>
+                                <h1 class="text-4xl md:text-6xl font-black text-center">Ready to hire a Process Server?</h1>
+                            </div>
+                            <a href="https://rocketserve.app/diamondback/" target="_blank">
+                                <p class="text-white flex bg-DBred py-4 px-8 rounded-full">Order Online Now <span class="pl-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                    </svg>
+                                </span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="flex flex-col md:flex-row justify-center md:space-x-8 mt-8">
+                            <div class="flex flex-col">
+                                <div class="flex mb-6">
+                                    <img class="h-20 w-auto pr-2" src="./src/img/logo/sanantonio-logo4.jpeg" alt="Your Company">
+                                    <div class="">
+                                        <p class="font-normal text-xl text-white">DiamondBack Process Server</p>
+                                        <p class="text-base font-medium text-DBred">San Antonio Texas</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="size-16 mr-8 flex items-center">
+                                        <img loading="lazy" src="./src/img/gallery/NAPPS.png" alt="">
+                                    </div>
+                                    <div class="size-14">
+                                        <img loading="lazy" src="./src/img/gallery/TAPS.webp" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:space-x-8">
+                                <div class="break-words space-y-2 tracking-wide max-w-90 text-white mb-8 mr-8 text-sm">
+                                    <h4 class="font-bold text-lg text-white mb-8">Contacts</h4>
+                                    <p>12370 Potranco Rd., Ste 207 #1229. San Antonio, TX 78253</p>
+                                    <p>1401 Lavaca Street Unit #7099. Austin, Texas 78701</p>
+                                    <p>726-800-3612</p>
+                                    <p>diamondbackps@outlook.com</p>
+                                </div>
+                                <div class="break-words space-y-2 max-w-80 text-white mb-4 text-sm">
+                                    <h4 class="font-bold text-lg text-white mb-4 md:mb-8">Social Media</h4>
+                                    <div class="flex w-fit px-6 space-x-5 bg-white p-2 rounded-full">
+                                        <span class="size-4">
+                                            <a href="https://www.facebook.com/share/n5qcfYvntHE41fGo/?mibextid=qi2Omg">                                                
+                                                <img loading="lazy" src="./src/img/icons/facebook.png" alt=""> 
+                                            </a>
+                                        </span>
+                                        <span class="size-4">
+                                            <a href="https://www.instagram.com/diamondbackprocessserver?igsh=MWxmM3Q3c2R0NW40ag%3D%3D">
+                                                <img loading="lazy" src="./src/img/icons/instagram.png" alt="">
+                                            </a>
+                                        </span>
+                                        <span class="size-4">
+                                            <a href="
+                                            https://www.tiktok.com/@diamondbackprocessserver?_t=8o2xbWznK3C&_r=1">
+                                                <img loading="lazy" src="./src/img/icons/tik-tok.png" alt="">
+                                            </a>
+                                        </span>
+                                        <span class="size-4">
+                                            <a href="https://g.page/r/CTNkZmOIdLn1EBM/review">
+                                                <img loading="lazy" src="./src/img/icons/map-marker.png" alt="">
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center mt-4">
+                            <div class="flex flex-col items-center text-white text-xs">
+                                <p>©2024 All rights reserved. DiamondBack Process Service, LLC. Powered by <a href="#!" target="_blank">Zhyck Atienza</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </footer> 
+            </div>
     </main>
     
 
@@ -458,8 +516,8 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-          const menuButton = document.getElementById('menu-button2');
-          const mobileMenu = document.getElementById('mobile-menu2');
+          const menuButton = document.getElementById('menu-button');
+          const mobileMenu = document.getElementById('mobile-menu');
           const openIcon = menuButton.querySelector('svg:first-child');
           const closeIcon = menuButton.querySelector('svg:last-child');
       
