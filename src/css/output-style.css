@@ -1301,11 +1301,6 @@ input:checked + .toggle-bg {
   height: 4rem;
 }
 
-.size-24 {
-  width: 6rem;
-  height: 6rem;
-}
-
 .size-28 {
   width: 7rem;
   height: 7rem;
@@ -1903,10 +1898,6 @@ input:checked + .toggle-bg {
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-8 {
-  padding: 2rem;
 }
 
 .px-10 {
@@ -2676,6 +2667,10 @@ input:checked + .toggle-bg {
     margin-bottom: 0px;
   }
 
+  .md\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
   .md\:mb-8 {
     margin-bottom: 2rem;
   }
@@ -2697,6 +2692,11 @@ input:checked + .toggle-bg {
     height: 2.5rem;
   }
 
+  .md\:size-24 {
+    width: 6rem;
+    height: 6rem;
+  }
+
   .md\:h-96 {
     height: 24rem;
   }
@@ -2707,14 +2707,6 @@ input:checked + .toggle-bg {
 
   .md\:h-\[50px\] {
     height: 50px;
-  }
-
-  .md\:h-\[8\%\] {
-    height: 8%;
-  }
-
-  .md\:h-\[7\%\] {
-    height: 7%;
   }
 
   .md\:h-\[6\%\] {
@@ -2731,6 +2723,10 @@ input:checked + .toggle-bg {
 
   .md\:w-1\/4 {
     width: 25%;
+  }
+
+  .md\:w-2\/3 {
+    width: 66.666667%;
   }
 
   .md\:max-w-\[90rem\] {
@@ -2797,6 +2793,11 @@ input:checked + .toggle-bg {
 
   .md\:text-5xl {
     font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
   }
 
